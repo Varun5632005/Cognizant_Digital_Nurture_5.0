@@ -1,0 +1,55 @@
+Time Complexity
+
+For the recursive method:
+
+T(n) = T(n-1) + O(1)
+
+Therefore:
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+The space complexity is O(n) because each recursive call is stored on the call stack.
+
+Optimization
+Problem
+
+For large values of years, recursion creates many stack frames, increasing memory usage and potentially causing a stack overflow.
+
+Solution 1: Iterative Approach
+public static double predictFutureValueIterative(
+        double presentValue,
+        double growthRate,
+        int years) {
+
+    double futureValue = presentValue;
+
+    for (int i = 0; i < years; i++) {
+        futureValue *= (1 + growthRate);
+    }
+
+    return futureValue;
+}
+
+Complexities:
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Solution 2: Direct Formula (Most Efficient)
+
+Using compound growth formula:
+
+FV=PV×(1+r)
+n
+public static double predictFutureValueOptimized(
+        double presentValue,
+        double growthRate,
+        int years) {
+
+    return presentValue * Math.pow(1 + growthRate, years);
+}
+
+Complexities:
+
+Time Complexity: O(log n) or better (implementation-dependent)
+Space Complexity: O(1)

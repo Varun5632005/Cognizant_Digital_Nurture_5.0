@@ -1,0 +1,41 @@
+What is Recursion?
+
+Recursion is a programming technique where a method calls itself to solve a problem by breaking it into smaller subproblems.
+
+A recursive function consists of:
+
+Base Case: Stops the recursion.
+Recursive Case: Calls itself with a smaller or simpler input.
+Example
+
+Factorial calculation:
+
+int factorial(int n) {
+    if (n == 0)
+        return 1; // Base case
+    return n * factorial(n - 1); // Recursive call
+}
+How Recursion Simplifies Problems
+
+Recursion is useful when:
+
+A problem can be divided into similar smaller problems.
+Mathematical formulas are naturally recursive.
+Tree and graph traversals are required.
+
+In financial forecasting, future values can be calculated repeatedly using the same growth formula, making recursion a natural solution.
+
+2. Setup
+
+Assume:
+
+Initial investment = PV
+Annual growth rate = r
+Number of years = n
+
+Formula:
+
+FVn	​= FVn−1×(1+r)
+
+Base case:
+FV0=PV
